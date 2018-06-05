@@ -12,8 +12,6 @@ if(subOrDub == 'true') {
   subtract = 69
 }
 
-console.log(subtract)
-
 for (i = firstEp; i < lastEp + 1; i++) {
   if (String(i).length === 1) {
     arr.push(String("00" + i));
