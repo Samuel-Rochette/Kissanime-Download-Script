@@ -27,7 +27,7 @@ This Program will not work for movies or OVAs. If the anime has both censored an
 
 10. Go to https://www.rapidvideo.com/ and open the console
 
-11. Copy, Paste, but **DO NOT RUN** the following command `$.getScript("https://rawgit.com/Samuel-Rochette/Kissanime-Download-Script/master/rapidvideo.js`
+11. Copy, Paste, but **DO NOT RUN** the following command `$.getScript("https://rawgit.com/Samuel-Rochette/Kissanime-Download-Script/master/rapidvideo.js)`
 
 12. Go back to the console on kissanime and copy the array of letters in numbers. **IMPORTANT** Make sure you copy them in such a way that they are not wraped in quotes. They should look like this `FF2WYA0CC4", "FF1X1PXJH4", "FF1X1R62JA`
 
