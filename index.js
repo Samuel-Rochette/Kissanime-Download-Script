@@ -1,15 +1,16 @@
-var animeUrl = prompt("Anime Url")
+var animeUrl = prompt("Anime Url");
 var animeName = prompt("Anime Name");
 var firstEp = prompt("First Episode");
 var lastEp = Number(prompt("Last Episode"));
 var epDif = Number(prompt("First Episode (Actual)")) - 1;
-var subOrDub = prompt("Sub or Dub (Answer with true or false)")
-var subtract = 63
+var subOrDub = prompt("Sub or Dub (Answer with true or false)");
+var subtract = 63;
+var add = 15;
 var arr = [];
 var vidArr = [];
 
-if(subOrDub == 'true') {
-  subtract = 69
+if (subOrDub == "true") {
+  subtract = 69;
 }
 
 for (i = firstEp; i < lastEp + 1; i++) {
@@ -43,7 +44,13 @@ arr.map(function(element) {
     tryCount: 0,
     retryLimit: 3,
     success: function(result) {
-      const urlMin = result.search("Episode-" + element) + 15;
+      if (result.search("Episode-" + element) == -1) {
+        element = element.substring(1, 3);
+        add = 14;
+      } else {
+        add = 15;
+      }
+      const urlMin = result.search("Episode-" + element) + add;
       const urlMax =
         result.search("Episode " + RealEp(element)) -
         subtract -
@@ -64,7 +71,7 @@ arr.map(function(element) {
           const urlMax2 = urlMin2 + 10;
           const rapidvideoid = result2.substring(urlMin2, urlMax2);
           vidArr.push(rapidvideoid);
-          console.log(vidArr)
+          console.log(vidArr);
         }
       });
     }
